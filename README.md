@@ -1,20 +1,16 @@
 # Classic Snake Game - ctrl QS Edition
 
-A Python implementation of the classic snake game using pygame, styled with [ctrl-qs.com](https://ctrl-qs.com) branding.
+A pure web browser implementation of the classic snake game using vanilla HTML, CSS, and JavaScript, styled with [ctrl-qs.com](https://ctrl-qs.com) branding.
 
-**✨ Spielbar im Browser über GitHub Pages!** - Siehe [DEPLOYMENT.md](DEPLOYMENT.md) für Details.
+**✨ Play instantly in any modern browser - no installation required!**
 
-## Setup
+## How to Run
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+**Option 1: Open locally**
+Simply open `index.html` in your web browser. No server or installation needed.
 
-2. Run the game:
-```bash
-python snake_game.py
-```
+**Option 2: Play online**
+Visit the GitHub Pages deployment - see [DEPLOYMENT.md](DEPLOYMENT.md) for details.
 
 ## How to Play
 
@@ -43,25 +39,24 @@ The game features **ctrl QS** brand identity:
 
 - **Design**: Modern rounded corners, clean typography (Nunito), minimalist aesthetic
 
-## Requirements
+## Technology Stack
 
-- Python 3.7+
-- pygame 2.5.2
-- pygbag 0.9.2 (für Browser-Deployment)
+- **HTML5 Canvas** - Game rendering
+- **Vanilla JavaScript** - Game logic (no frameworks or dependencies)
+- **CSS3** - Styling and layout
+- **No build tools required** - Pure client-side implementation
 
-## Browser-Deployment
+## File Structure
 
-Das Spiel kann im Browser gespielt werden dank **Pygbag** (Pygame → WebAssembly).
-
-**Quick Start:**
-```bash
-# Build für Browser
-pygbag snake_game.py
-
-# Test lokal
-cd build/web && python -m http.server 8000
-# Öffne http://localhost:8000
+```
+/snake/
+├── index.html       # Main game page
+├── styles.css       # ctrl-qs branding and layout
+├── game.js          # Complete game logic
+├── README.md        # This file
+└── DEPLOYMENT.md    # GitHub Pages deployment guide
 ```
 
-**Deployment auf GitHub Pages:**
-Siehe [DEPLOYMENT.md](DEPLOYMENT.md) für vollständige Anleitung.
+## Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for instructions on deploying to GitHub Pages or any static hosting service.
