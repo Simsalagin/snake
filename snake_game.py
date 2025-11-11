@@ -118,13 +118,9 @@ class Game:
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption("Snake Game - ctrl QS")
         self.clock = pygame.time.Clock()
-        # Try to use Nunito font (ctrl-qs branding), fallback to sans-serif
-        try:
-            self.font = pygame.font.SysFont('nunito', 36, bold=True)
-            self.font_small = pygame.font.SysFont('nunito', 24)
-        except:
-            self.font = pygame.font.SysFont('arial', 36, bold=True)
-            self.font_small = pygame.font.SysFont('arial', 24)
+        # Use pygame default font (browser-compatible)
+        self.font = pygame.font.Font(None, 36)
+        self.font_small = pygame.font.Font(None, 24)
         self.reset()
 
     def reset(self):
