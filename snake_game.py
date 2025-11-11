@@ -1,6 +1,7 @@
 import pygame
 import random
 import sys
+import asyncio
 from enum import Enum
 
 # Initialize pygame
@@ -199,7 +200,7 @@ class Game:
 
         pygame.display.flip()
 
-    def run(self):
+    async def run(self):
         running = True
         while running:
             running = self.handle_input()
@@ -207,10 +208,12 @@ class Game:
             self.draw()
             self.clock.tick(FPS)
 
+            # Yield control to browser (essential for pygbag)
+            await asyncio.sleep(0)
+
         pygame.quit()
-        sys.exit()
 
 
 if __name__ == "__main__":
     game = Game()
-    game.run()
+    asyncio.run(game.run())

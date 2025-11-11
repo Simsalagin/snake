@@ -2,6 +2,8 @@
 
 A Python implementation of the classic snake game using pygame, styled with [ctrl-qs.com](https://ctrl-qs.com) branding.
 
+**✨ Spielbar im Browser über GitHub Pages!** - Siehe [DEPLOYMENT.md](DEPLOYMENT.md) für Details.
+
 ## Setup
 
 1. Install dependencies:
@@ -45,3 +47,21 @@ The game features **ctrl QS** brand identity:
 
 - Python 3.7+
 - pygame 2.5.2
+- pygbag 0.9.2 (für Browser-Deployment)
+
+## Browser-Deployment
+
+Das Spiel kann im Browser gespielt werden dank **Pygbag** (Pygame → WebAssembly).
+
+**Quick Start:**
+```bash
+# Build für Browser
+pygbag snake_game.py
+
+# Test lokal
+cd build/web && python -m http.server 8000
+# Öffne http://localhost:8000
+```
+
+**Deployment auf GitHub Pages:**
+Siehe [DEPLOYMENT.md](DEPLOYMENT.md) für vollständige Anleitung.
